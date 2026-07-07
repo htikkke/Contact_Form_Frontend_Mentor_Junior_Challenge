@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@theme {
+  --color-button-background: hsl(169, 82%, 27%);
+  --color-main-background: hsl(148, 38%, 91%);
+}

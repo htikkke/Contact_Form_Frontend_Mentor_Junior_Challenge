@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./src/images/favicon-32x32.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Contact Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="w-full min-h-screen bg-main-background flex justify-center items-center"
+  >
+    <section
+      id="main-container"
+      class="w-[40vw] h-auto font-karla bg-white rounded-lg grid grid-rows-[auto,auto,auto,auto,auto,auto,auto] pt-10 pr-10 pl-10 pb-5 gap-2"
+    >
+      <div id="heading-container" class="flex items-center justify-start pb-5">
+        <h1 class="font-medium text-3xl">Contact Us</h1>
+      </div>
+      <div id="name-container" class="flex w-full gap-4">
+        <div class="w-1/2">
+          <p class="mb-2 text-sm">First Name</p>
+          <input
+            type="text"
+            class="w-full p-2 rounded-lg border border-gray-500"
+          />
+        </div>
+        <div class="w-1/2">
+          <p class="mb-2 text-sm">Last Name</p>
+          <input
+            type="text"
+            class="w-full p-2 rounded-lg border border-gray-500"
+          />
+        </div>
+      </div>
+      <div id="email-container" class="w-full">
+        <p class="mb-2 text-sm">Email Address</p>
+        <input
+          type="text"
+          class="w-full p-2 rounded-lg border border-gray-500"
+        />
+      </div>
+      <div id="query-container">
+        <p class="mb-2 text-sm">Query Type</p>
+        <div class="flex w-full gap-4">
+          <div
+            class="flex items-center justify-start gap-1 w-full p-2 rounded-lg border border-gray-500"
+          >
+            <input type="radio" name="query-type" />
+            <p>General Enquiry</p>
+          </div>
+          <div
+            class="flex items-center justify-start gap-1 w-full p-2 rounded-lg border border-gray-500"
+          >
+            <input type="radio" name="query-type" />
+            <p>Support Request</p>
+          </div>
+        </div>
+      </div>
+      <div id="message-container" class="w-full h-auto">
+        <p>Message</p>
+        <textarea
+          rows="4"
+          class="w-full p-2 rounded-lg border border-gray-500"
+        ></textarea>
+      </div>
+      <div
+        id="accept-container"
+        class="flex items-center justify-start gap-3 pt-5 pb-5"
+      >
+        <input type="checkbox" />
+        <p>I consent to being contacted by the team</p>
+      </div>
+      <div id="button-container" class="w-full">
+        <button class="w-full p-2 rounded-lg bg-button-background">
+          Submit
+        </button>
+      </div>
+    </section>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
