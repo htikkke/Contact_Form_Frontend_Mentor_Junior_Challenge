@@ -21,53 +21,76 @@
   >
     <section
       id="main-container"
-      class="w-[40vw] h-auto font-karla bg-white rounded-lg grid grid-rows-[auto,auto,auto,auto,auto,auto,auto] pt-10 pr-10 pl-10 pb-5 gap-2"
+      class="w-[40vw] h-auto font-karla bg-white rounded-lg grid grid-rows-[auto,auto,auto,auto,auto,auto,auto] pt-10 pr-10 pl-10 pb-10 gap-3"
     >
       <div id="heading-container" class="flex items-center justify-start pb-5">
         <h1 class="font-medium text-3xl">Contact Us</h1>
       </div>
       <div id="name-container" class="flex w-full gap-4">
         <div class="w-1/2">
-          <p class="mb-2 text-sm">First Name</p>
+          <p class="mb-2 text-sm flex gap-2">
+            First Name
+            <span class="text-star-color text-xs font-bold">*</span>
+          </p>
           <input
             type="text"
-            class="w-full p-2 rounded-lg border border-gray-500"
+            class="w-full p-2 rounded-lg border border-gray-500 cursor-pointer focus:outline-none focus:border-2 focus:border-green-500"
           />
         </div>
         <div class="w-1/2">
-          <p class="mb-2 text-sm">Last Name</p>
+          <p class="mb-2 text-sm flex gap-2">
+            Last Name
+            <span class="text-star-color text-xs font-bold">*</span>
+          </p>
           <input
             type="text"
-            class="w-full p-2 rounded-lg border border-gray-500"
+            class="w-full p-2 rounded-lg border border-gray-500 cursor-pointer focus:outline-none focus:border-2 focus:border-green-500"
           />
         </div>
       </div>
       <div id="email-container" class="w-full">
-        <p class="mb-2 text-sm">Email Address</p>
+        <p class="mb-2 text-sm flex gap-2">
+          Email Address
+          <span class="text-star-color text-xs font-bold">*</span>
+        </p>
         <input
           type="text"
-          class="w-full p-2 rounded-lg border border-gray-500"
+          class="w-full p-2 rounded-lg border border-gray-500 cursor-pointer focus:outline-none focus:border-2 focus:border-green-500"
         />
       </div>
       <div id="query-container">
-        <p class="mb-2 text-sm">Query Type</p>
+        <p class="mb-2 text-sm flex gap-2">
+          Query Type
+          <span class="text-star-color text-xs font-bold">*</span>
+        </p>
         <div class="flex w-full gap-4">
           <div
-            class="flex items-center justify-start gap-1 w-full p-2 rounded-lg border border-gray-500"
+            class="flex items-center justify-start gap-3 w-full p-2 rounded-lg border border-gray-500 has-checked:bg-main-background has-checked:outline-none has-checked:border-green-500"
           >
-            <input type="radio" name="query-type" />
+            <input
+              type="radio"
+              name="query-type"
+              class="accent-radio-color w-4 h-4 cursor-pointer ml-4"
+            />
             <p>General Enquiry</p>
           </div>
           <div
-            class="flex items-center justify-start gap-1 w-full p-2 rounded-lg border border-gray-500"
+            class="flex items-center justify-start gap-3 w-full p-2 rounded-lg border border-gray-500 has-checked:bg-main-background has-checked:outline-none has-checked:border-green-500"
           >
-            <input type="radio" name="query-type" />
+            <input
+              type="radio"
+              name="query-type"
+              class="accent-radio-color w-4 h-4 cursor-pointer ml-4"
+            />
             <p>Support Request</p>
           </div>
         </div>
       </div>
       <div id="message-container" class="w-full h-auto">
-        <p>Message</p>
+        <p class="mb-2 text-sm flex gap-2">
+          Message
+          <span class="text-star-color text-xs font-bold">*</span>
+        </p>
         <textarea
           rows="4"
           class="w-full p-2 rounded-lg border border-gray-500"
@@ -75,13 +98,22 @@
       </div>
       <div
         id="accept-container"
-        class="flex items-center justify-start gap-3 pt-5 pb-5"
+        class="flex items-center justify-start gap-3 pt-5 pb-5 select-none"
       >
-        <input type="checkbox" />
-        <p>I consent to being contacted by the team</p>
+        <input
+          type="checkbox"
+          id="agree-rule"
+          class="cursor-pointer h-4 w-4 accent-star-color"
+        />
+        <label for="agree-rule" class="flex gap-2 cursor-pointer">
+          I consent to being contacted by the team
+          <span class="text-star-color text-xs font-bold">*</span>
+        </label>
       </div>
       <div id="button-container" class="w-full">
-        <button class="w-full p-2 rounded-lg bg-button-background">
+        <button
+          class="w-full p-2 rounded-lg bg-button-background font-sm text-white cursor-pointer active:scale-95 transition-all"
+        >
           Submit
         </button>
       </div>
