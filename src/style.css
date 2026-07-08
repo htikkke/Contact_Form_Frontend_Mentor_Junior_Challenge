@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @theme {
   --color-button-background: hsl(169, 82%, 27%);
+  --color-button-hover-background: hsl(170, 84%, 18%);
   --color-main-background: hsl(148, 38%, 91%);
   --color-star-color: hsl(169, 82%, 27%);
   --color-radio-color: hsl(169, 82%, 27%);

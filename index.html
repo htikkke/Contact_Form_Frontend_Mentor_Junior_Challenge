@@ -21,7 +21,7 @@
   >
     <section
       id="main-container"
-      class="w-[40vw] h-auto font-karla bg-white rounded-lg grid grid-rows-[auto,auto,auto,auto,auto,auto,auto] pt-10 pr-10 pl-10 pb-10 gap-3"
+      class="w-[40vw] h-auto font-karla bg-white rounded-lg grid grid-rows-[auto,auto,auto,auto,auto,auto,auto] pt-10 pr-10 pl-10 pb-10 gap-3 transition-all"
     >
       <div id="heading-container" class="flex items-center justify-start pb-5">
         <h1 class="font-medium text-3xl">Contact Us</h1>
@@ -34,7 +34,7 @@
           </p>
           <input
             type="text"
-            class="w-full p-2 rounded-lg border border-gray-500 cursor-pointer focus:outline-none focus:border-2 focus:border-green-500"
+            class="w-full p-2 rounded-lg border border-gray-500 cursor-pointer focus:outline-none focus:border-2 focus:border-green-500 hover:border-2 hover:border-green-500"
           />
         </div>
         <div class="w-1/2">
@@ -44,7 +44,7 @@
           </p>
           <input
             type="text"
-            class="w-full p-2 rounded-lg border border-gray-500 cursor-pointer focus:outline-none focus:border-2 focus:border-green-500"
+            class="w-full p-2 rounded-lg border border-gray-500 cursor-pointer focus:outline-none focus:border-2 focus:border-green-500 hover:border-2 hover:border-green-500"
           />
         </div>
       </div>
@@ -55,7 +55,7 @@
         </p>
         <input
           type="text"
-          class="w-full p-2 rounded-lg border border-gray-500 cursor-pointer focus:outline-none focus:border-2 focus:border-green-500"
+          class="w-full p-2 rounded-lg border border-gray-500 cursor-pointer focus:outline-none focus:border-2 focus:border-green-500 hover:border-2 hover:border-green-500"
         />
       </div>
       <div id="query-container">
@@ -64,26 +64,30 @@
           <span class="text-star-color text-xs font-bold">*</span>
         </p>
         <div class="flex w-full gap-4">
-          <div
-            class="flex items-center justify-start gap-3 w-full p-2 rounded-lg border border-gray-500 has-checked:bg-main-background has-checked:outline-none has-checked:border-green-500"
+          <label
+            for="radio-choice-1"
+            class="flex items-center justify-start gap-3 w-full p-2 rounded-lg border border-gray-500 has-checked:bg-main-background has-checked:outline-none has-checked:border-green-500 cursor-pointer"
           >
             <input
               type="radio"
+              id="radio-choice-1"
               name="query-type"
               class="accent-radio-color w-4 h-4 cursor-pointer ml-4"
             />
             <p>General Enquiry</p>
-          </div>
-          <div
-            class="flex items-center justify-start gap-3 w-full p-2 rounded-lg border border-gray-500 has-checked:bg-main-background has-checked:outline-none has-checked:border-green-500"
+          </label>
+          <label
+            for="radio-choice-2"
+            class="flex items-center justify-start gap-3 w-full p-2 rounded-lg border border-gray-500 has-checked:bg-main-background has-checked:outline-none has-checked:border-green-500 cursor-pointer"
           >
             <input
               type="radio"
+              id="radio-choice-2"
               name="query-type"
               class="accent-radio-color w-4 h-4 cursor-pointer ml-4"
             />
             <p>Support Request</p>
-          </div>
+          </label>
         </div>
       </div>
       <div id="message-container" class="w-full h-auto">
@@ -112,7 +116,7 @@
       </div>
       <div id="button-container" class="w-full">
         <button
-          class="w-full p-2 rounded-lg bg-button-background font-sm text-white cursor-pointer active:scale-95 transition-all"
+          class="w-full p-2 rounded-md bg-button-background font-sm text-white cursor-pointer active:scale-95 hover:bg-button-hover-background transition-all"
         >
           Submit
         </button>
