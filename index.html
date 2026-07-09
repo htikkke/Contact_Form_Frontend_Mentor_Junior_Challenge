@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/Contact_Form_Frontend_Mentor_Junior_Challenge/assets/favicon-32x32-DQjEQYWa.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Contact Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/Contact_Form_Frontend_Mentor_Junior_Challenge/assets/index-C8dST2y0.js"></script>
+    <link rel="stylesheet" crossorigin href="/Contact_Form_Frontend_Mentor_Junior_Challenge/assets/index-83QkTbaN.css">
+  </head>
+  <body
+    class="w-full min-h-screen bg-main-background flex justify-center items-center"
+  >
+    <section
+      id="main-container"
+      class="w-[40vw] h-auto font-karla bg-white rounded-lg grid grid-rows-[auto,auto,auto,auto,auto,auto,auto] p-5 gap-3 transition-all max-[1025px]:w-[50vw] max-[770px]:w-[60vw] max-[600px]:w-[90vw]"
+    >
+      <div id="heading-container" class="flex items-center justify-start pb-5">
+        <h1 class="font-medium text-3xl">Contact Us</h1>
+      </div>
+      <div
+        id="name-container"
+        class="flex w-full gap-4 max-[600px]:flex-col max-[600px]:gap-0"
+      >
+        <div class="w-1/2 max-[600px]:w-full">
+          <p class="mb-2 text-sm flex gap-2">
+            First Name
+            <span class="text-star-color text-xs font-bold">*</span>
+          </p>
+          <input
+            type="text"
+            id="firstname-input"
+            class="w-full p-2 rounded-lg border border-gray-500 cursor-pointer focus:outline-none focus:border-2 focus:border-green-500 hover:border-2 hover:border-green-500"
+          />
+          <p
+            id="firstname-error-alert"
+            class="text-[10px] tracking-wide text-error-color font-karla mt-1 invisible transition-all"
+          >
+            This field is required
+          </p>
+        </div>
+        <div class="w-1/2 max-[600px]:w-full">
+          <p class="mb-2 text-sm flex gap-2">
+            Last Name
+            <span class="text-star-color text-xs font-bold">*</span>
+          </p>
+          <input
+            type="text"
+            id="lastname-input"
+            class="w-full p-2 rounded-lg border border-gray-500 cursor-pointer focus:outline-none focus:border-2 focus:border-green-500 hover:border-2 hover:border-green-500"
+          />
+          <p
+            id="lastname-error-alert"
+            class="text-[10px] tracking-wide text-error-color font-karla mt-1 invisible transition-all"
+          >
+            This field is required
+          </p>
+        </div>
+      </div>
+      <div id="email-container" class="w-full">
+        <p class="mb-2 text-sm flex gap-2">
+          Email Address
+          <span class="text-star-color text-xs font-bold">*</span>
+        </p>
+        <input
+          id="email-input"
+          type="email"
+          class="w-full p-2 rounded-lg border border-gray-500 cursor-pointer focus:outline-none focus:border-2 focus:border-green-500 hover:border-2 hover:border-green-500"
+        />
+        <p
+          id="email-error-alert"
+          class="text-[10px] tracking-wide text-error-color font-karla mt-1 invisible transition-all"
+        >
+          Please enter a valid email address
+        </p>
+      </div>
+      <div id="query-container">
+        <p class="mb-2 text-sm flex gap-2">
+          Query Type
+          <span class="text-star-color text-xs font-bold">*</span>
+        </p>
+        <div class="flex w-full gap-4 max-[600px]:flex-col">
+          <label
+            for="radio-choice-1"
+            class="flex items-center justify-start gap-3 w-full p-2 rounded-lg border border-gray-500 has-checked:bg-main-background has-checked:outline-none has-checked:border-green-500 cursor-pointer"
+          >
+            <input
+              type="radio"
+              id="radio-choice-1"
+              name="query-type"
+              class="accent-radio-color w-4 h-4 cursor-pointer ml-4"
+            />
+            <p>General Enquiry</p>
+          </label>
+          <label
+            for="radio-choice-2"
+            class="flex items-center justify-start gap-3 w-full p-2 rounded-lg border border-gray-500 has-checked:bg-main-background has-checked:outline-none has-checked:border-green-500 cursor-pointer"
+          >
+            <input
+              type="radio"
+              id="radio-choice-2"
+              name="query-type"
+              class="accent-radio-color w-4 h-4 cursor-pointer ml-4"
+            />
+            <p>Support Request</p>
+          </label>
+        </div>
+        <p
+          id="query-error-alert"
+          class="text-[10px] tracking-wide text-error-color font-karla mt-1 invisible transition-all"
+        >
+          Please select a query type
+        </p>
+      </div>
+      <div id="message-container">
+        <p class="mb-2 text-sm flex gap-2">
+          Message
+          <span class="text-star-color text-xs font-bold">*</span>
+        </p>
+        <textarea
+          id="message-input"
+          class="w-full h-24 p-2 rounded-lg border border-gray-500 max-[600px]:h-40"
+        ></textarea>
+        <p
+          id="message-error-alert"
+          class="text-[10px] tracking-wide text-error-color font-karla mt-1 invisible transition-all"
+        >
+          This field is required
+        </p>
+      </div>
+      <div
+        id="accept-container"
+        class="flex items-center justify-start gap-3 pt-5 pb-5 select-none relative"
+      >
+        <input
+          type="checkbox"
+          id="agree-rule"
+          name="agree-rule"
+          class="cursor-pointer h-4 w-4 accent-star-color"
+        />
+        <label for="agree-rule" class="flex gap-2 cursor-pointer">
+          I consent to being contacted by the team
+          <span class="text-star-color text-xs font-bold">*</span>
+        </label>
+        <p
+          id="consent-error-alert"
+          class="text-[10px] tracking-wide text-error-color font-karla mt-1 absolute bottom-3 invisible transition-all"
+        >
+          To submit this form, please consent to being contacted
+        </p>
+      </div>
+      <div id="button-container" class="w-full">
+        <button
+          id="submit-button"
+          class="w-full p-2 rounded-md bg-button-background font-sm text-white cursor-pointer active:scale-95 hover:bg-button-hover-background transition-all"
+        >
+          Submit
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
