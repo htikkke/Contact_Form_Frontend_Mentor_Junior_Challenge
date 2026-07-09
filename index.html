@@ -21,13 +21,16 @@
   >
     <section
       id="main-container"
-      class="w-[40vw] h-auto font-karla bg-white rounded-lg grid grid-rows-[auto,auto,auto,auto,auto,auto,auto] p-5 gap-3 transition-all"
+      class="w-[40vw] h-auto font-karla bg-white rounded-lg grid grid-rows-[auto,auto,auto,auto,auto,auto,auto] p-5 gap-3 transition-all max-[1025px]:w-[50vw] max-[770px]:w-[60vw] max-[600px]:w-[90vw]"
     >
       <div id="heading-container" class="flex items-center justify-start pb-5">
         <h1 class="font-medium text-3xl">Contact Us</h1>
       </div>
-      <div id="name-container" class="flex w-full gap-4">
-        <div class="w-1/2">
+      <div
+        id="name-container"
+        class="flex w-full gap-4 max-[600px]:flex-col max-[600px]:gap-0"
+      >
+        <div class="w-1/2 max-[600px]:w-full">
           <p class="mb-2 text-sm flex gap-2">
             First Name
             <span class="text-star-color text-xs font-bold">*</span>
@@ -44,7 +47,7 @@
             This field is required
           </p>
         </div>
-        <div class="w-1/2">
+        <div class="w-1/2 max-[600px]:w-full">
           <p class="mb-2 text-sm flex gap-2">
             Last Name
             <span class="text-star-color text-xs font-bold">*</span>
@@ -84,7 +87,7 @@
           Query Type
           <span class="text-star-color text-xs font-bold">*</span>
         </p>
-        <div class="flex w-full gap-4">
+        <div class="flex w-full gap-4 max-[600px]:flex-col">
           <label
             for="radio-choice-1"
             class="flex items-center justify-start gap-3 w-full p-2 rounded-lg border border-gray-500 has-checked:bg-main-background has-checked:outline-none has-checked:border-green-500 cursor-pointer"
@@ -117,15 +120,14 @@
           Please select a query type
         </p>
       </div>
-      <div id="message-container" class="w-full h-auto">
+      <div id="message-container">
         <p class="mb-2 text-sm flex gap-2">
           Message
           <span class="text-star-color text-xs font-bold">*</span>
         </p>
         <textarea
           id="message-input"
-          rows="3"
-          class="w-full p-2 rounded-lg border border-gray-500"
+          class="w-full h-24 p-2 rounded-lg border border-gray-500 max-[600px]:h-40"
         ></textarea>
         <p
           id="message-error-alert"
@@ -136,7 +138,7 @@
       </div>
       <div
         id="accept-container"
-        class="flex items-center justify-start gap-3 pt-5 pb-8 select-none relative"
+        class="flex items-center justify-start gap-3 pt-5 pb-5 select-none relative"
       >
         <input
           type="checkbox"
