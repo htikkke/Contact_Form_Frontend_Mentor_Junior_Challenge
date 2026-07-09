@@ -21,7 +21,7 @@
   >
     <section
       id="main-container"
-      class="w-[40vw] h-auto font-karla bg-white rounded-lg grid grid-rows-[auto,auto,auto,auto,auto,auto,auto] pt-10 pr-10 pl-10 pb-10 gap-3 transition-all"
+      class="w-[40vw] h-auto font-karla bg-white rounded-lg grid grid-rows-[auto,auto,auto,auto,auto,auto,auto] p-5 gap-3 transition-all"
     >
       <div id="heading-container" class="flex items-center justify-start pb-5">
         <h1 class="font-medium text-3xl">Contact Us</h1>
@@ -34,8 +34,15 @@
           </p>
           <input
             type="text"
+            id="firstname-input"
             class="w-full p-2 rounded-lg border border-gray-500 cursor-pointer focus:outline-none focus:border-2 focus:border-green-500 hover:border-2 hover:border-green-500"
           />
+          <p
+            id="firstname-error-alert"
+            class="text-[10px] tracking-wide text-error-color font-karla mt-1 invisible transition-all"
+          >
+            This field is required
+          </p>
         </div>
         <div class="w-1/2">
           <p class="mb-2 text-sm flex gap-2">
@@ -44,8 +51,15 @@
           </p>
           <input
             type="text"
+            id="lastname-input"
             class="w-full p-2 rounded-lg border border-gray-500 cursor-pointer focus:outline-none focus:border-2 focus:border-green-500 hover:border-2 hover:border-green-500"
           />
+          <p
+            id="lastname-error-alert"
+            class="text-[10px] tracking-wide text-error-color font-karla mt-1 invisible transition-all"
+          >
+            This field is required
+          </p>
         </div>
       </div>
       <div id="email-container" class="w-full">
@@ -54,9 +68,16 @@
           <span class="text-star-color text-xs font-bold">*</span>
         </p>
         <input
-          type="text"
+          id="email-input"
+          type="email"
           class="w-full p-2 rounded-lg border border-gray-500 cursor-pointer focus:outline-none focus:border-2 focus:border-green-500 hover:border-2 hover:border-green-500"
         />
+        <p
+          id="email-error-alert"
+          class="text-[10px] tracking-wide text-error-color font-karla mt-1 invisible transition-all"
+        >
+          Please enter a valid email address
+        </p>
       </div>
       <div id="query-container">
         <p class="mb-2 text-sm flex gap-2">
@@ -89,6 +110,12 @@
             <p>Support Request</p>
           </label>
         </div>
+        <p
+          id="query-error-alert"
+          class="text-[10px] tracking-wide text-error-color font-karla mt-1 invisible transition-all"
+        >
+          Please select a query type
+        </p>
       </div>
       <div id="message-container" class="w-full h-auto">
         <p class="mb-2 text-sm flex gap-2">
@@ -96,26 +123,41 @@
           <span class="text-star-color text-xs font-bold">*</span>
         </p>
         <textarea
-          rows="4"
+          id="message-input"
+          rows="3"
           class="w-full p-2 rounded-lg border border-gray-500"
         ></textarea>
+        <p
+          id="message-error-alert"
+          class="text-[10px] tracking-wide text-error-color font-karla mt-1 invisible transition-all"
+        >
+          This field is required
+        </p>
       </div>
       <div
         id="accept-container"
-        class="flex items-center justify-start gap-3 pt-5 pb-5 select-none"
+        class="flex items-center justify-start gap-3 pt-5 pb-8 select-none relative"
       >
         <input
           type="checkbox"
           id="agree-rule"
+          name="agree-rule"
           class="cursor-pointer h-4 w-4 accent-star-color"
         />
         <label for="agree-rule" class="flex gap-2 cursor-pointer">
           I consent to being contacted by the team
           <span class="text-star-color text-xs font-bold">*</span>
         </label>
+        <p
+          id="consent-error-alert"
+          class="text-[10px] tracking-wide text-error-color font-karla mt-1 absolute bottom-3 invisible transition-all"
+        >
+          To submit this form, please consent to being contacted
+        </p>
       </div>
       <div id="button-container" class="w-full">
         <button
+          id="submit-button"
           class="w-full p-2 rounded-md bg-button-background font-sm text-white cursor-pointer active:scale-95 hover:bg-button-hover-background transition-all"
         >
           Submit

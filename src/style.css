@@ -5,4 +5,5 @@
   --color-main-background: hsl(148, 38%, 91%);
   --color-star-color: hsl(169, 82%, 27%);
   --color-radio-color: hsl(169, 82%, 27%);
+  --color-error-color: hsl(0, 66%, 54%);
 }
